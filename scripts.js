@@ -1,19 +1,14 @@
+$('a[href*="#"]').on('click',function(e){
 
- 
+  e.preventDefault();
 
-  $('a[href*="#"]').on('click',function(e){
+  $('html, body').animate({
 
-    e.preventDefault();
+    scrollTop : $($(this).attr('href')).offset().top,
 
-    $('html, body').animate({
-
-      scrollTop : $($(this).attr('href')).offset().top,
-
-    },
-      500, 
-      'linear'
-    );
-
-  });
+  },
+    500, 
+    'linear'
+  );
 
 });
